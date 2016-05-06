@@ -9,7 +9,15 @@ body {
     height: 100%;
     font-family: Lora,"Helvetica Neue",Helvetica,Arial,sans-serif;
     color: black;
-    background-color: white;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-flow: row wrap;
+        -ms-flex-flow: row wrap;
+            flex-flow: row wrap;
+    background-color: red;
+    overflow-x: hidden;
 }
 
 html {
@@ -246,10 +254,6 @@ img::-moz-selection {
     background: 0 0;
 }
 
-body {
-    webkit-tap-highlight-color: rgba(255,255,255,.2);
-}
-
 /* The CSS for the Menu*/
 @import url(http://fonts.googleapis.com/css?family=Raleway:500);
 #ajerez {
@@ -271,25 +275,15 @@ body {
   border-radius: 30%;
 }
 
-body {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-flow: row wrap;
-      -ms-flex-flow: row wrap;
-          flex-flow: row wrap;
-  background-color: red;
-}
-
 *, *:before, *:after {
   box-sizing: border-box;
 }
 
 .menu-wrapper {
-  /*margin-top: 40px;*/
+  margin-bottom: -10%;
   margin-left: 50px;
-  position: relative;
+  margin-top: 50px;
+  /*position: relative;*/
   width: 250px;
   height: 250px;
 }
@@ -322,6 +316,11 @@ body {
   top: -12px;
   left: 50px;
 }
+
+.nav-links{
+    font-family: "Lato";
+}
+
 .menu:hover > ul.nav-links, .menu.open > ul.nav-links {
   -webkit-transition: all 0.25s ease-in-out;
   transition: all 0.25s ease-in-out;
@@ -436,7 +435,7 @@ a:hover {
 .social {
   right: 0;
   top: 25%;
-  margin-right: 2%;
+  margin-right: 1%;
   position: fixed;
   font-size: 3vw;
   color: red;
@@ -445,10 +444,10 @@ a:hover {
 
 .socialicons {
   color: red;
-  padding-left: 12px;
-  padding-right: 8px;
+  padding-left: 20px;
+  padding-right: 16px;
   padding-top: 15px;
-  padding-bottom: 5px;
+  padding-bottom: 15px;
   list-style: none;
   background-color: black;
   border-radius: 15px;
@@ -457,7 +456,7 @@ a:hover {
 
 .calendar {
   margin-top: 5%;
-  margin-right: 7%;
+  margin-right: 7.5%;
   margin-left: 40%;
   background-color: black;
   color: red;
@@ -477,20 +476,22 @@ a:hover {
 
 #music {
   z-index: 1;
-  margin-top: -50px;
+  margin-top: -125px;
   /*background-image: url("../img/dylant.jpg");*/
   width: 100%;
+  background-color: white;
 }
 
 .showlabel {
   color: red;
   font-size: 5vw;
-  text-shadow: 3px 3px white;
+  font-family: "Lato";
+  /*font-weight: bold;*/
 }
 
 .signaturet {
   margin-left: 4%;
-  margin-top: 200px;
+  margin-top: 500px;
   margin-right: -500px;
   float: left;
   font-size: 8vw;
@@ -500,8 +501,9 @@ a:hover {
 }
 
 .divider1 {
-  height: 150px;
-  width: 100%;
+  height: 175px;
+  width: 110%;
+  margin-right: -5px;
   background-color: red;
   transform: rotate(-3.5deg);
   -webkit-transform-origin: 3% 0;
@@ -510,11 +512,22 @@ a:hover {
 .divider2 {
   z-index: 1;
   margin-top: -125px;
+  margin-right: -5px;
   height: 175px;
-  width: 100%;
+  width: 110%;
   background-color: red;
   transform: rotate(3.5deg);
   -webkit-transform-origin: 3% 0;
+}
+
+.divider3 {
+height: 175px;
+width: 110%;
+margin-right: -5px;
+background-color: red;
+transform: rotate(-3.5deg);
+-webkit-transform-origin: 3% 0;
+z-index: 1;
 }
 
 divider1:p {
@@ -529,4 +542,52 @@ divider1:p {
 
 .row {
   width: 100%;
+}
+
+i {
+  padding-top: 10px;
+}
+
+#about {
+  height: 800px;
+  z-index: 1;
+  margin-top: -50px;
+  background-color: white;
+}
+
+@media(max-width: 300px) {
+  .mainlogo {
+    max-width: 100%;
+    height: auto;
+  }
+}
+
+.col-lg-6 {
+  margin-top: 100px;
+}
+
+.bio {
+  color: black;
+  margin-right: 10%;
+  margin-left: 10%;
+  font-size: 1.2vw;
+  z-index: 1;
+}
+
+.G {
+  font-size: 1.3vw;
+}
+
+.mainlogo{
+  margin: 0 auto;
+  max-width: 800px;
+  height: auto;
+  width: 100%;
+}
+
+.image-responsive {
+  max-width: 600px;
+  height: auto;
+  width: 100%;
+
 }
